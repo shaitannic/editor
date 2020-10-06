@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  min-width: 600px;
+  margin: 10px;
+  padding: 10px 0 10px 10px;
+  padding-left: 20px;
+  flex-direction: column;
+  border: 1px dotted #e5ebf3;
+}
+
+.description {
+  font-size: 21px;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+  color: #656565;
+}
+
+.group {
+  display: flex;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+:host ::ng-deep app-wrapper-row .wrapper {
+  margin: 10px 0 10px 10px;
+  border-right: unset;
+}

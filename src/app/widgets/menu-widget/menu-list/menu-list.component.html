@@ -1,0 +1,5 @@
+<div class="menu-container">
+  <div class="menu-item" *ngFor="let item of menuItems">
+    <app-menu-item [class.active]="activeItem === item" [menuItem]="item" (click)="activateItem(item)"></app-menu-item>
+  </div>
+</div>

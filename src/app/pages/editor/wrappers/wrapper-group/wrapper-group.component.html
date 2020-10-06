@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <div class="group">
+    <span (click)="toggle()" class="description">{{ item?.name }}</span>
+  </div>
+
+  <div #groupContent>
+    <ng-container #childContainer></ng-container>
+  </div>
+</div>

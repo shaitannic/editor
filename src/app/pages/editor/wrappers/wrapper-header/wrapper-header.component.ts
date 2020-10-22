@@ -21,11 +21,11 @@ import { BaseWrapper, Wrapper } from '../wrapper';
 export class WrapperHeaderComponent<T extends T[]> extends BaseWrapper<T> {
   @Input() componentFactory: ComponentFactory<ComponentNode<T>>;
 
-  @ViewChild('childContainer', { read: ViewContainerRef }) childContainer: ViewContainerRef;
+  @ViewChild('childContainer', { read: ViewContainerRef, static: true }) childContainer: ViewContainerRef;
 
   private _children: Wrapper<T>[];
 
-  @ViewChild('componentNodeContainer', { read: ViewContainerRef }) componentNodeContainer: ViewContainerRef;
+  @ViewChild('componentNodeContainer', { read: ViewContainerRef, static: false }) componentNodeContainer: ViewContainerRef;
 
   constructor(public changeDetectorRef: ChangeDetectorRef, private componentFactoryResolver: ComponentFactoryResolver) {
     super(changeDetectorRef);

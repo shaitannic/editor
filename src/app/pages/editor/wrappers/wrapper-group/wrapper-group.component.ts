@@ -23,8 +23,8 @@ import { BaseWrapper, Wrapper } from '../wrapper';
 export class WrapperGroupComponent<T extends T[]> extends BaseWrapper<T> {
   @Input() componentFactory: ComponentFactory<ComponentNode<T>>;
 
-  @ViewChild('groupContent', { read: ElementRef }) groupContentElementRef: ElementRef;
-  @ViewChild('childContainer', { read: ViewContainerRef }) childContainer: ViewContainerRef;
+  @ViewChild('groupContent', { read: ElementRef, static: true }) groupContentElementRef: ElementRef;
+  @ViewChild('childContainer', { read: ViewContainerRef, static: true }) childContainer: ViewContainerRef;
 
   /**
    * Флаг, отражающий видимость содержимого группы
@@ -35,7 +35,7 @@ export class WrapperGroupComponent<T extends T[]> extends BaseWrapper<T> {
 
   private _children: Wrapper<T>[];
 
-  @ViewChild('componentNodeContainer', { read: ViewContainerRef }) componentNodeContainer: ViewContainerRef;
+  @ViewChild('componentNodeContainer', { read: ViewContainerRef, static: false }) componentNodeContainer: ViewContainerRef;
 
   constructor(
     public changeDetectorRef: ChangeDetectorRef,

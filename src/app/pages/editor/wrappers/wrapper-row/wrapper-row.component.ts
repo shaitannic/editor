@@ -24,7 +24,7 @@ import { BaseWrapper } from '../wrapper';
 export class WrapperRowComponent<T> extends BaseWrapper<T> implements AfterViewInit {
   componentNode: ComponentNode<T>;
 
-  @ViewChild('componentNodeContainer', { read: ViewContainerRef }) componentNodeContainer: ViewContainerRef;
+  @ViewChild('componentNodeContainer', { read: ViewContainerRef, static: true }) componentNodeContainer: ViewContainerRef;
 
   constructor(
     public injector: Injector,

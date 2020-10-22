@@ -13,7 +13,7 @@ import { switchMap, takeUntil } from 'rxjs/operators';
 export class EditorComponent<T> implements AfterViewInit, OnDestroy {
   private ngUnsubscribe: Subject<any> = new Subject();
 
-  @ViewChild('container', { read: ViewContainerRef }) container: ViewContainerRef;
+  @ViewChild('container', { read: ViewContainerRef, static: true }) container: ViewContainerRef;
 
   constructor(
     private route: ActivatedRoute,

@@ -10,9 +10,9 @@ import {
   ViewContainerRef,
   AfterViewInit,
 } from '@angular/core';
+import { ComponentNode } from '../../models/component-node';
 import { ComponentNodeFactory } from '../../models/component.factory';
 import { COMPONENTS_CONFIG } from '../../models/components.config';
-import { ComponentNode } from '../../models/editor';
 import { BaseWrapper } from '../wrapper';
 
 @Component({

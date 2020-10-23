@@ -13,7 +13,7 @@ import { FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { DISABLE_STRATEGY, DisableStrategy } from '../disable-strategy';
 import { BaseControl } from '../base-control';
-import { ComponentNode } from '../../models/editor';
+import { ComponentNode } from '../../models/component-node';
 
 export interface InputComponentNode<T> extends ComponentNode<T> {
   // TODO добавлять сюда поведения, которые характерны для элемента input

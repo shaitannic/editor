@@ -16,12 +16,6 @@ export interface Item {
   children?: Item[];
 }
 
-export interface ComponentNode<T> {
-  getValue(): T;
-  writeValue(newValue: T): void;
-  setDisableState(isDisabled: boolean): void;
-}
-
 @Injectable()
 export class EditorService<T> {
   rootViewContainerRef: ViewContainerRef;

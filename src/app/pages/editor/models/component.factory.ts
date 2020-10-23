@@ -1,10 +1,11 @@
 import { ComponentFactory, ComponentRef, Injector, ViewContainerRef } from '@angular/core';
+import { Item } from '.';
 import { SelectBuilder, SelectDirector } from '../builders';
 import { BaseBuilder } from '../builders/builder';
 import { DatepickerBuilder, DatepickerDirector } from '../builders/datepicker.builder';
 import { InputBuilder, InputDirector } from '../builders/input.builder';
 import { DatepickerComponent, InputComponent, SelectComponent } from '../components';
-import { ComponentNode, Item } from '.';
+import { ComponentNode } from './component-node';
 
 /**
  * Фабрика, отвечающая за создание компонентов оберток

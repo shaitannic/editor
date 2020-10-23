@@ -1,7 +1,7 @@
 import { Type } from '@angular/core';
 import { ComponentWrapperType } from '../../../api/api.service';
 import { DatepickerComponent, InputComponent, SelectComponent } from '../components';
-import { ComponentNode } from './editor';
+import { ComponentNode } from './component-node';
 
 /**
  * Структура данных, хранящая соответствие между

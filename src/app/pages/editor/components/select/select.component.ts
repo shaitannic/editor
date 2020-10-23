@@ -14,12 +14,8 @@ import { SELECT_SOURCE_STRATEGY, SelectSourceStrategy } from './select-source-st
 import { DISABLE_STRATEGY, DisableStrategy } from '../disable-strategy';
 import { BaseControl } from '../base-control';
 import { Subject } from 'rxjs';
+import { ComponentNode } from '../../models/component-node';
 
-export interface ComponentNode<T> {
-  getValue(): T;
-  writeValue(newValue: T): void;
-  setDisableState(isDisabled: boolean): void;
-}
 export interface SelectComponentNode<T> extends ComponentNode<T> {
   setSelectSourceStrategy(strategy: SelectSourceStrategy): void;
 }

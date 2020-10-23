@@ -1,7 +1,8 @@
 import { OnInit, ChangeDetectorRef, Optional, Inject, Injectable } from '@angular/core';
 import { DISABLE_STRATEGY, DisableStrategy } from './disable-strategy';
-import { ComponentNode, Item } from '../models';
 import { ControlValueAccessor } from '@angular/forms';
+import { ComponentNode } from '../models/component-node';
+import { Item } from '../models';
 
 @Injectable()
 export abstract class BaseControl<T> implements OnInit, ComponentNode<T>, ControlValueAccessor {

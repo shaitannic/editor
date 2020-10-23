@@ -1,4 +1,4 @@
-import { ComponentNode } from '../models/editor';
+import { ComponentNode } from '../models/component-node';
 
 /**
  * Строитель. Базовый абстрактный класс, отвечающий за конфигурирование компонентов-оберток

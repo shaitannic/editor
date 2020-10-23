@@ -1,12 +1,4 @@
-import {
-  Component,
-  ChangeDetectorRef,
-  forwardRef,
-  ChangeDetectionStrategy,
-  Optional,
-  Inject,
-  OnInit,
-} from '@angular/core';
+import { Component, ChangeDetectorRef, forwardRef, ChangeDetectionStrategy, Optional, Inject, OnInit, Injectable } from '@angular/core';
 import { formatDate } from '@angular/common';
 import { FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -15,7 +7,7 @@ import { DateAdapter, MAT_DATE_FORMATS, NativeDateAdapter } from '@angular/mater
 import { BaseControl } from '../base-control';
 
 import { DisableStrategy, DISABLE_STRATEGY } from '../disable-strategy';
-import { ComponentNode } from '../../models/editor';
+import { ComponentNode } from '../../models/component-node';
 
 export const PICK_FORMATS = {
   parse: { dateInput: { month: 'short', year: 'numeric', day: 'numeric' } },
@@ -27,6 +19,7 @@ export const PICK_FORMATS = {
   },
 };
 
+@Injectable()
 export class PickDateAdapter extends NativeDateAdapter {
   format(date: Date, displayFormat: Object): string {
     if (displayFormat === 'input') {

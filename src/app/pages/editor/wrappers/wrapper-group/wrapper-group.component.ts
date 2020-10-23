@@ -11,7 +11,7 @@ import {
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
-import { ComponentNode } from '../../models/editor';
+import { ComponentNode } from '../../models/component-node';
 import { BaseWrapper, Wrapper } from '../wrapper';
 
 @Component({
@@ -35,7 +35,7 @@ export class WrapperGroupComponent<T extends T[]> extends BaseWrapper<T> {
 
   private _children: Wrapper<T>[];
 
-  @ViewChild('componentNodeContainer', { read: ViewContainerRef, static: false }) componentNodeContainer: ViewContainerRef;
+  @ViewChild('componentNodeContainer', { read: ViewContainerRef }) componentNodeContainer: ViewContainerRef;
 
   constructor(
     public changeDetectorRef: ChangeDetectorRef,

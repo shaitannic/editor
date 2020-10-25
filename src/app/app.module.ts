@@ -6,6 +6,7 @@ import { MenuModule } from './widgets/menu-widget/menu.module';
 import { EditorModule } from './pages/editor/editor.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { MyLibModule } from 'my-lib';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
     EditorModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    MyLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

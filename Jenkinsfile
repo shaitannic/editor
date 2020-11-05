@@ -1,23 +1,25 @@
 pipeline {
-  agent none
-  stages {
-    stage('Install') {
-      steps { sh 'npm install' }
+    agent {
+        docker { image 'node:10-alpine' }
     }
-
-    stage('Test') {
-      parallel {
-        stage('Static code analysis') {
-            steps { sh 'npm run-script lint' }
+    stages {
+        stage('Install') {
+            steps { sh 'npm install' }
         }
-        stage('Unit tests') {
-            steps { sh 'npm run-script test' }
-        }
-      }
-    }
 
-    stage('Build') {
-      steps { sh 'npm run-script build' }
+        // stage('Test') {
+        //     parallel {
+        //         stage('Static code analysis') {
+        //             steps { sh 'npm run-script lint' }
+        //         }
+        //         stage('Unit tests') {
+        //             steps { sh 'npm run-script test' }
+        //         }
+        //     }
+        // }
+
+        // stage('Build') {
+        //     steps { sh 'npm run-script build' }
+        // }
     }
-  }
 }

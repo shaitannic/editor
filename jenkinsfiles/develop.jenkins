@@ -13,8 +13,14 @@ pipeline{
     stages{
         stage("First step"){
             steps{
-                // echo "========executing A========"
+                // echo "========executing First step========"
                 sh 'ssh shaitannic@84.201.170.103 \'hostname\''
+            }
+        }
+      stage("Second step"){
+            steps{
+                // echo "========executing Second step========"
+                sh 'ssh shaitannic@84.201.170.103 \'uptime\''
             }
         }
     }
